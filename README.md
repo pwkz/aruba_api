@@ -53,6 +53,8 @@ npm run devStart
 
 ## Running react:
 
+Inside client directory:
+
 ```bash
 npm start
 ```
