@@ -1,4 +1,4 @@
-# app_praktyki
+# aruba_api
 
 ## Installation
 
