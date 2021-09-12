@@ -1,5 +1,5 @@
 const xlsx = require('xlsx');
-
+require('dotenv').config()
 const filePath = process.argv.slice(2)[0];
 const nazwa = process.argv.slice(3)[0];
 const workbook = xlsx.readFile(filePath, {sheetStubs: true});
@@ -19,8 +19,8 @@ class ReadXlsFile {
 
     neo4j = require('neo4j-driver')
     driver = this.neo4j.driver(
-        'neo4j://localhost',
-        this.neo4j.auth.basic('neo4j', 'mynewpass1')
+        process.env.DB_URL,
+        this.neo4j.auth.basic(process.env.DB_USER, process.env.DB_PASS)
     )
 
     constructor(buildingName) {
